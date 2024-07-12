@@ -1,10 +1,7 @@
-function formatName()
-{
-    var myString = "victor red";
-    var upperString = myString.trim();
-    
-    console.log(upperString.toUpperCase(0,6));
+let inputString = " victor red ";
+let outputString = inputString.trim().replace(/^ +| +$/g, '').replace
+(/\b\w/g, function (match) {
+    return match.toUpperCase();
+});
 
-}
-
-formatName();
+console.log(outputString);
